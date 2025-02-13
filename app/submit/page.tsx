@@ -181,9 +181,7 @@ export default function HealthCardRenewal() {
       // setOtpard({otp,...otpArd})
 
     }
-    if (stepr === 6) {
-
-    }
+ 
   }
   useEffect(() => {
     const data = {
