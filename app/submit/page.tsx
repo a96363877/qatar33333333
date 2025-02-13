@@ -86,8 +86,8 @@ export default function HealthCardRenewal() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     if (stepr === 1) {
-      if (id === '' ) {
-        return alert('الرجاء ادخال رقم البطاقة الشخصية')
+      if (id.length < 9 ) {
+        return alert(' رقم البطاقة الشخصية غير صحيح!')
 
       }
     } else if (stepr === 2) {
