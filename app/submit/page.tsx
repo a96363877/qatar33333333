@@ -252,20 +252,6 @@ export default function HealthCardRenewal() {
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <Label className="flex gap-1 text-sm sm:text-base">
-                        الرجاء إدخال الاسم الرباعي
-                        <span className="text-red-500">*</span>
-                      </Label>
-                      <Input
-                        dir="rtl"
-                        onChange={(e) => setName(e.target.value.toString())}
-                        type="text" placeholder="الاسم الرباعيٍ"
-
-                        maxLength={11}
-                        className="max-w-md text-sm sm:text-base"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label className="flex gap-1 text-sm sm:text-base">
                         الرجاء إدخال رقم البطاقة الشخصية
                         <span className="text-red-500">*</span>
                       </Label>
